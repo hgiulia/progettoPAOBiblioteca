@@ -1,0 +1,37 @@
+[
+    {
+        "anno": 2022,
+        "autore": "Nuovo Autore",
+        "codice": 1,
+        "descrizione": "Un romanzo di F. Scott Fitzgerald, considerato uno dei capolavori della letteratura americana.",
+        "editore": "Nuovo Genere",
+        "genere": "Nuovo Editore",
+        "isbn": "9780743273565",
+        "numeroPagine": 350,
+        "percorsoImmagine": "path_to_image/gatsby.jpg",
+        "tipo": "libro"
+    },
+    {
+        "anno": 2010,
+        "codice": 2,
+        "descrizione": "Un film di Christopher Nolan che esplora il mondo dei sogni.",
+        "durata": 148,
+        "genere": "Sci-Fi",
+        "lingua": "Inglese",
+        "percorsoImmagine": "path_to_image/inception.jpg",
+        "produzione": "Warner Bros.",
+        "regista": "Christopher Nolan",
+        "tipo": "film"
+    },
+    {
+        "anno": 2023,
+        "autore": "National Geographic Society",
+        "codice": 3,
+        "dataPubblicazione": "Gennaio 2023",
+        "descrizione": "Una rivista che esplora il mondo naturale e la scienza.",
+        "numeroRivista": 1021,
+        "percorsoImmagine": "path_to_image/natgeo.jpg",
+        "rivista": "National Geographic",
+        "tipo": "rivista"
+    }
+]

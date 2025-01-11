@@ -1,0 +1,40 @@
+[
+  {
+    "codice": 1,
+    "titolo": "Il Grande Gatsby",
+    "anno": 1925,
+    "descrizione": "Un romanzo di F. Scott Fitzgerald, considerato uno dei capolavori della letteratura americana.",
+    "percorsoImmagine": "path_to_image/gatsby.jpg",
+    "tipo": "libro",
+    "isbn": "9780743273565",
+    "autore": "F. Scott Fitzgerald",
+    "numeroPagine": 180,
+    "genere": "Narrativa",
+    "editore": "Scribner"
+  },
+  {
+    "codice": 2,
+    "titolo": "Inception",
+    "anno": 2010,
+    "descrizione": "Un film di Christopher Nolan che esplora il mondo dei sogni.",
+    "percorsoImmagine": "path_to_image/inception.jpg",
+    "tipo": "film",
+    "durata": 148,
+    "regista": "Christopher Nolan",
+    "produzione": "Warner Bros.",
+    "genere": "Sci-Fi",
+    "lingua": "Inglese"
+  },
+  {
+    "codice": 3,
+    "titolo": "National Geographic",
+    "anno": 2023,
+    "descrizione": "Una rivista che esplora il mondo naturale e la scienza.",
+    "percorsoImmagine": "path_to_image/natgeo.jpg",
+    "tipo": "rivista",
+    "autore": "National Geographic Society",
+    "rivista": "National Geographic",
+    "numeroRivista": 1021,
+    "dataPubblicazione": "Gennaio 2023"
+  }
+]
