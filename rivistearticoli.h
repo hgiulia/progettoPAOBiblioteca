@@ -32,7 +32,7 @@ public:
 
     std::string visualizzaDettagli() const override;
     
-    void aggiornaDati(const Media& mediaAggiornare) override;
+
 };
 
 #endif

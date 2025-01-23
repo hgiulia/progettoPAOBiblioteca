@@ -51,30 +51,6 @@ std::string RivisteArticoli::visualizzaDettagli() const {
            "Data Pubblicazione: " + dataPubblicazione;
 }
 
-void RivisteArticoli::aggiornaDati(const Media& mediaAggiornare){
-    const RivisteArticoli& r=dynamic_cast<const RivisteArticoli&>(mediaAggiornare);
-    if (!r.getTitolo().empty()) {
-        setTitolo(r.getTitolo());
-    }
-    if (r.getAnnoPubblicazione() != 0) {
-        setAnnoPubblicazione(r.getAnnoPubblicazione());
-    }
-    if (!r.getAutore().empty()) {
-        setAutore(r.getAutore());
-    }
-    if (!r.getRivista().empty()) {
-        setRivista(r.getRivista());
-    }
-    if (r.getNumeroRivista() != 0) {
-        setNumeroRivista(r.getNumeroRivista());
-    }
-    if (!r.getDataPubblicazione().empty()) {
-        setDataPubblicazione(r.getDataPubblicazione());
-    }
-
-
-
-}
 
 
 

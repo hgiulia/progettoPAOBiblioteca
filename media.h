@@ -17,14 +17,11 @@ private:
 
 public:
     Media(const unsigned int code, const std::string& title, int year, const std::string& description, const std::string& imageUrl );
-    virtual ~Media() = default;
+    virtual ~Media();
 
     void setTitolo(const std::string &t);
     void setAnnoPubblicazione(const int t);
     void setDescrizione(const std::string &t);
-
-
-
     unsigned int getCodiceUnivoco() const;
     const std::string& getTitolo() const;
     int getAnnoPubblicazione() const;
@@ -33,7 +30,7 @@ public:
 
     virtual std::string visualizzaDettagli() const =0;
 
-    virtual void aggiornaDati(const Media& mediaAggiornare) = 0;
+
 
 
 

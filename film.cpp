@@ -9,8 +9,6 @@ Film::Film(const unsigned int code, const std::string& title, int year, const st
     genere(genere),
     lingua(lingua) {}
 
-
-
 int Film::getDurata() const {
     return durata;
 }
@@ -53,9 +51,6 @@ void Film::setLingua(const std::string& lingua) {
 
 // Metodi sovrascritti
 std::string Film::visualizzaDettagli() const {
-    std::cout << "-------------FFFIIILMMM-------------\n";
-
-    std::cout << "--------------------------\n";
     return "Titolo: " + getTitolo() + "\n" +
            "Anno: " + std::to_string(getAnnoPubblicazione()) + "\n" +
            "Descrizione: " + getDescrizione() + "\n" +
@@ -66,24 +61,4 @@ std::string Film::visualizzaDettagli() const {
            "Lingua: " + lingua;
 }
 
-void Film::aggiornaDati(const Media& mediaAggiornare){
-const Film& f=dynamic_cast<const Film&>(mediaAggiornare);
-    if (!f.getTitolo().empty()) {
-        setTitolo(f.getTitolo());
-    }
-    if (f.getAnnoPubblicazione() != 0) {
-        setAnnoPubblicazione(f.getAnnoPubblicazione());
-    }
-    if (!f.getRegista().empty()) {
-        setRegista(f.getRegista());
-    }
-    if (!f.getGenere().empty()) {
-        setGenere(f.getGenere());
-    }
-    if (f.getDurata() != 0) {
-        setDurata(f.getDurata());
-    }
-
-
-}
 

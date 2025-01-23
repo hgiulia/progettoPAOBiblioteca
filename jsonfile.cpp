@@ -20,7 +20,7 @@ QJsonDocument JsonFile::load() const {
 
 
     if (!file.open(QFile::ReadOnly)) {
-    std::cerr << "Errore nell'aprire il file per la lettura!" << std::endl;
+    //std::cerr << "Errore nell'aprire il file per la lettura!" << std::endl;
         return QJsonDocument();
     }
 
@@ -39,7 +39,7 @@ void JsonFile::store(const QJsonDocument& document) const {
 
 
     if (!file.open(QFile::WriteOnly)) {
-        std::cerr << "Errore nell'aprire il file per la scrittura!" << std::endl;
+       // std::cerr << "Errore nell'aprire il file per la scrittura!" << std::endl;
         return;
     }
 

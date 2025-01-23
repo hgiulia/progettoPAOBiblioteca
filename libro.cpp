@@ -1,6 +1,4 @@
 #include "libro.h"
-#include<string>
-#include <iostream>
 
 Libro::Libro(const unsigned int code, const std::string& title, int year, const std::string& description, const std::string& imageUrl,
              const std::string& ISBN, const std::string& autore, int numeroPagine, const std::string& genere, const std::string& editore)
@@ -54,28 +52,6 @@ std::string Libro::visualizzaDettagli() const {
            "Pagine: " + std::to_string(numeroPagine) + "\n" +
            "Genere: " + genere + "\n" +
            "Editore: " + editore;
-}
-
-void Libro::aggiornaDati(const Media& mediaAggiornare){
-    const Libro& l=dynamic_cast<const Libro&>(mediaAggiornare);
-    if (!l.getTitolo().empty()) {
-        setTitolo(l.getTitolo());
-    }
-    if (l.getAnnoPubblicazione() != 0) {
-        setAnnoPubblicazione(l.getAnnoPubblicazione());
-    }
-    if (!l.getAutore().empty()) {
-        setAutore(l.getAutore());
-    }
-    if (!l.getGenere().empty()) {
-        setGenere(l.getGenere());
-    }
-    if (l.getNumeroPagine() != 0) {
-        setNumeroPagine(l.getNumeroPagine());
-    }
-    if (!l.getEditore().empty()) {
-        setEditore(l.getEditore());
-    }
 }
 
 

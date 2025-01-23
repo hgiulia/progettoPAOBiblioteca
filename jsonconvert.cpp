@@ -12,6 +12,7 @@ QJsonObject JsonConvert::toJson(const Media& media) {
 
     if (const Libro* libro = dynamic_cast<const Libro*>(&media)) {
         json["tipo"] = "libro";
+        json["titolo"] = QString::fromStdString(libro->getTitolo());
         json["isbn"] = QString::fromStdString(libro->getISBN());
         json["autore"] = QString::fromStdString(libro->getAutore());
         json["numeroPagine"] = libro->getNumeroPagine();
@@ -19,6 +20,8 @@ QJsonObject JsonConvert::toJson(const Media& media) {
         json["editore"] = QString::fromStdString(libro->getEditore());
     } else if (const Film* film = dynamic_cast<const Film*>(&media)) {
         json["tipo"] = "film";
+        json["titolo"] = QString::fromStdString(film->getTitolo());
+
         json["durata"] = film->getDurata();
         json["regista"] = QString::fromStdString(film->getRegista());
         json["produzione"] = QString::fromStdString(film->getProduzioneCinematografica());
@@ -26,6 +29,8 @@ QJsonObject JsonConvert::toJson(const Media& media) {
         json["lingua"] = QString::fromStdString(film->getLingua());
     } else if (const RivisteArticoli* articolo = dynamic_cast<const RivisteArticoli*>(&media)) {
         json["tipo"] = "rivista";
+        json["titolo"] = QString::fromStdString(articolo->getTitolo());
+
         json["autore"] = QString::fromStdString(articolo->getAutore());
         json["rivista"] = QString::fromStdString(articolo->getRivista());
         json["numeroRivista"] = articolo->getNumeroRivista();

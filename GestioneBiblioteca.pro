@@ -9,6 +9,9 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    aggiungimediadialog.cpp \
+    creatoolbar.cpp \
+    creaview.cpp \
     film.cpp \
     jsonconvert.cpp \
     jsonfile.cpp \
@@ -17,9 +20,13 @@ SOURCES += \
     mainwindow.cpp \
     media.cpp \
     mediamodel.cpp \
+    modificamediadialog.cpp \
     rivistearticoli.cpp
 
 HEADERS += \
+    aggiungimediadialog.h \
+    creatoolbar.h \
+    creaview.h \
     film.h \
     jsonconvert.h \
     jsonfile.h \
@@ -27,6 +34,7 @@ HEADERS += \
     mainwindow.h \
     media.h \
     mediamodel.h \
+    modificamediadialog.h \
     rivistearticoli.h
 
 FORMS += \
@@ -43,5 +51,12 @@ RESOURCES += \
 DISTFILES += \
     database.json \
     database/database.json \
-    database/database2.json
+    database/database2.json \
+    immagini/1984.jpg \
+    immagini/IlPadrino.jpg \
+    immagini/IlSignoreDegliAnelli.jpg \
+    immagini/Inception.jpg \
+    immagini/InnovazioneDigitale.jpg \
+    immagini/OrgoglioEPregiudizio.jpg \
+    immagini/PulpFiction.jpg
 

@@ -1,0 +1,93 @@
+[
+    {
+          "tipo": "libro",
+		  "codice": 1,
+		  "titolo": "DATABASE 3Il Signore degli Anelli",
+		  "anno": 1954,
+		  "descrizione": "Un romanzo fantasy che narra le avventure di un hobbit, Frodo Baggins.",
+		  "percorsoImmagine": "http://example.com/immagine.jpg",
+		  "isbn": "978-0261103252",
+		  "autore": "J.R.R. Tolkien",
+		  "numeroPagine": 1216,
+		  "genere": "Fantasy",
+		  "editore": "HarperCollins"
+    },
+    {
+       "tipo": "film",
+	  "codice": 2,
+	  "titolo": "DATABASE 3Inception",
+	  "anno": 2010,
+	  "descrizione": "Un ladro esperto in estrazione di informazioni da sogni entra in un mondo di sogni condivisi.",
+	  "percorsoImmagine": "http://example.com/filmimage.jpg",
+	  "durata": 148,
+	  "regista": "Christopher Nolan",
+	  "produzione": "Warner Bros.",
+	  "genere": "Sci-Fi",
+	  "lingua": "Inglese"
+    },
+    {
+          "tipo": "rivista",
+		  "codice": 3,
+		  "titolo": "DATABASE 3La Scienza del Futuro",
+		  "anno": 2023,
+		  "descrizione": "Articolo che esplora le ultime scoperte scientifiche e le innovazioni tecnologiche.",
+		  "percorsoImmagine": "http://example.com/rivistaimage.jpg",
+		  "autore": "Dr. Alberto Rossi",
+		  "rivista": "Scienza e Tecnologia",
+		  "numeroRivista": 45,
+		  "dataPubblicazione": "2023-03-15"
+    }
+	,
+    {
+          "tipo": "rivista",
+		  "codice": 4,
+		  "titolo": "DATABASE 3La S4  Futuro",
+		  "anno": 2023,
+		  "descrizione": "Articolo che esplora le ultime scoperte scientifiche e le innovazioni tecnologiche.",
+		  "percorsoImmagine": "http://example.com/rivistaimage.jpg",
+		  "autore": "Dr. Alberto Rossi",
+		  "rivista": "Scienza e Tecnologia",
+		  "numeroRivista": 45,
+		  "dataPubblicazione": "2023-03-15"
+    }
+	,
+    {
+          "tipo": "rivista",
+		  "codice": 5,
+		  "titolo": "DATABASE 3Lao 5",
+		  "anno": 2023,
+		  "descrizione": "Articolo che esplora le ultime scoperte scientifiche e le innovazioni tecnologiche.",
+		  "percorsoImmagine": "http://example.com/rivistaimage.jpg",
+		  "autore": "Dr. Alberto Rossi",
+		  "rivista": "Scienza e Tecnologia",
+		  "numeroRivista": 45,
+		  "dataPubblicazione": "2023-03-15"
+    }
+	,
+    {
+          "tipo": "rivista",
+		  "codice": 6,
+		  "titolo": "DATABASE 3Rivista 6",
+		  "anno": 2023,
+		  "descrizione": "Articolo che esplora le ultime scoperte scientifiche e le innovazioni tecnologiche.",
+		  "percorsoImmagine": "http://example.com/rivistaimage.jpg",
+		  "autore": "Dr. Alberto Rossi",
+		  "rivista": "Scienza e Tecnologia",
+		  "numeroRivista": 45,
+		  "dataPubblicazione": "2023-03-15"
+    }
+	,
+    {
+       "tipo": "film",
+	  "codice": 7,
+	  "titolo": "DATABASE 3Nuovo Film 7",
+	  "anno": 2010,
+	  "descrizione": "Un ladro esperto in estrazione di informazioni da sogni entra in un mondo di sogni condivisi.",
+	  "percorsoImmagine": "http://example.com/filmimage.jpg",
+	  "durata": 148,
+	  "regista": "Christopher Nolan",
+	  "produzione": "Warner Bros.",
+	  "genere": "Sci-Fi",
+	  "lingua": "Inglese"
+    }
+]

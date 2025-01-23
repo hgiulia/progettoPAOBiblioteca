@@ -17,6 +17,12 @@ void Media::setAnnoPubblicazione(int year) {
     annoPubblicazione = year;
 }
 
+void Media::setDescrizione(const std::string& t) {
+    descrizione = t;
+}
+
+
+
 unsigned int Media::getCodiceUnivoco() const {
     return codiceUnivoco;
 }

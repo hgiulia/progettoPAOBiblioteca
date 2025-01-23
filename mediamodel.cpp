@@ -1,5 +1,12 @@
 #include "mediamodel.h"
 
+unsigned int mediaModel::ultimoCodiceUnivoco = 0;
+unsigned int mediaModel::getNuovoCodiceUnivoco() {
+    ultimoCodiceUnivoco= (mediaCollezione.back())->getCodiceUnivoco();
+    return ++ultimoCodiceUnivoco;  // Incrementa e restituisce il nuovo codice univoco
+}
+
+
 
 mediaModel::mediaModel() {}
 mediaModel::~mediaModel() {
@@ -9,7 +16,9 @@ mediaModel::~mediaModel() {
 }
 
 void mediaModel::aggiungiMedia(Media *media){
-    mediaCollezione.push_back(media);
+    if (media) {
+        mediaCollezione.push_back(media);
+    }
 }
 
 void mediaModel::eliminaMedia(unsigned int codiceMedia){
@@ -33,36 +42,13 @@ Media * mediaModel::cercaMedia(unsigned int codiceMedia) const{
 }
 
 
-void mediaModel::getDettagliMedia(unsigned int codiceMedia) const {
+std::string mediaModel::getDettagliMedia(unsigned int codiceMedia) const {
     Media* media = cercaMedia(codiceMedia);
     if (media) {
-        media->visualizzaDettagli();
+        return media->visualizzaDettagli();
     }
+    return NULL;
 }
-
-void mediaModel::modificaMedia(unsigned int codiceUnivoco, const Media& mediaModificata) {
-    for (auto& media : mediaCollezione) {
-        if (media->getCodiceUnivoco() == codiceUnivoco) {
-
-            if (dynamic_cast<Libro*>(media)) {
-                const Libro& nuovoLibro = static_cast<const Libro&>(mediaModificata);
-                (dynamic_cast<Libro*>(media))->aggiornaDati(nuovoLibro);
-            }
-            else if (dynamic_cast<Film*>(media)) {
-                const Film& nuovoFilm = static_cast<const Film&>(mediaModificata);
-                (dynamic_cast<Film*>(media))->aggiornaDati(nuovoFilm);
-            } else if (dynamic_cast<RivisteArticoli*>(media)) {
-                const RivisteArticoli & nuovoArticolo = static_cast<const RivisteArticoli&>(mediaModificata);
-                (dynamic_cast<RivisteArticoli*>(media))->aggiornaDati(nuovoArticolo);
-            }
-            return;
-        }
-    }
-
-}
-
-
-
 
 std::vector<Media*> mediaModel::getMediaCollezione() const {
     return  mediaCollezione;
@@ -85,8 +71,6 @@ void mediaModel::salvaFile(const std::string& filePath) const {
 }
 
 
-
-
 void mediaModel::caricaFile(const std::string& filePath) {
     JsonFile jsonFile(filePath, converter);
     QJsonDocument document = jsonFile.load();
@@ -105,7 +89,47 @@ void mediaModel::caricaFile(const std::string& filePath) {
         QJsonObject jsonObject = value.toObject();
         Media* media = converter.fromJson(jsonObject);
         if (media) {
+
             mediaCollezione.push_back(media);
+            ++ultimoCodiceUnivoco;
+
         }
     }
+}
+
+std::vector<std::string> mediaModel::getTitoliMedia() const {
+    std::vector<std::string> titoli;
+    for (const auto& media : mediaCollezione) {
+
+        titoli.push_back(media->getTitolo());
+
+    }
+    return titoli;
+}
+
+unsigned int mediaModel::getCodicePerTitolo(const std::string& titolo) const {
+    for (const auto& media : mediaCollezione) {
+        if (media->getTitolo() == titolo) {
+            return media->getCodiceUnivoco();
+        }
+    }
+    return 0;
+}
+
+std::vector<std::string> mediaModel::filtraMedia(const std::string& tipo) const {
+    std::vector<std::string> titoli;
+
+    for (const auto& media : mediaCollezione) {
+        if (tipo == "libro" && dynamic_cast<const Libro*>(media)) {
+            titoli.push_back(media->getTitolo());
+        }
+        else if (tipo == "film" && dynamic_cast<const Film*>(media)) {
+            titoli.push_back(media->getTitolo());
+        }
+        else if (tipo == "articolo" && dynamic_cast<const RivisteArticoli*>(media)) {
+            titoli.push_back(media->getTitolo());
+        }
+    }
+
+    return titoli;
 }
